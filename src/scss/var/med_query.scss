@@ -1,0 +1,46 @@
+// Var
+$extra-small:480px;
+$small:576px;
+$medium:768px;
+$large:992px;
+$extra-large:1280px;
+$full:1680px;
+
+// Mixin
+@mixin responsive ($breakpoint) {
+    @if $breakpoint==xs {
+        @media (min-width: $extra-small) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==s {
+        @media (min-width: $small) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==m {
+        @media (min-width: $medium) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==l {
+        @media (min-width: $large) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==xl {
+        @media (min-width: $extra-large) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==hd {
+        @media (min-width: $full) {
+            @content;
+        }
+    }
+}

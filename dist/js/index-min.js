@@ -1,0 +1,1 @@
+const NavToggle=document.querySelector(".navbar_toggle input"),navbar=document.querySelector(".navbar ul");NavToggle.addEventListener("click",function(){navbar.classList.toggle("seret")});
