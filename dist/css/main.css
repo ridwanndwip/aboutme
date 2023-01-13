@@ -5,41 +5,38 @@ nav {
 nav span {
   display: block;
 }
-@media (min-width: 768px) {
-  nav span {
-    font-size: 24px;
-    font-weight: 300;
-  }
-}
-
 .hero {
+  padding: 3.5em 1.5em;
+  border-bottom: 1px solid #0F3D3E;
+}
+.hero_container {
+  margin-right: 3em;
   display: flex;
   align-items: Default;
   justify-content: Default;
   flex-direction: column;
   gap: 1em;
-  padding: 3.5em 1.5em;
-  border-bottom: 1px solid #0F3D3E;
 }
-.hero_caption {
+.hero_container_caption {
   display: block;
   font-size: 30px;
   font-weight: Bold;
   margin-bottom: 0.2em;
 }
-.hero_content {
+.hero_container_content {
   display: block;
   font-size: 12px;
   font-weight: 300;
   line-height: 22px;
 }
-.hero_content span {
+.hero_container_content span {
   font-weight: bold;
 }
-.hero_button {
+.hero_container_button {
   margin-top: 1em;
+  margin-bottom: 1em;
 }
-.hero_button a {
+.hero_container_button a {
   font-size: 12px;
   font-weight: 300;
   background-color: #0F3D3E;
@@ -163,6 +160,24 @@ body {
 * {
   margin: 0;
   padding: 0;
+}
+
+.vertical-line {
+  height: 1750px;
+  border-left: 1px solid #0F3D3E;
+  position: absolute;
+  right: 50px;
+  top: 68px;
+}
+@media (min-width: 480px) {
+  .vertical-line {
+    height: 1550px;
+  }
+}
+@media (min-width: 768px) {
+  .vertical-line {
+    height: 1450px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

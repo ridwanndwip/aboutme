@@ -1,33 +1,38 @@
 .hero{
-    @include flex(Default,Default,column);
-    gap: 1em;
     padding: 3.5em 1.5em;
     border-bottom: 1px solid $color2;
 
-    &_caption{
-        display: block;
-        @include text(30px, Bold);
-        margin-bottom: .2em;
-    }
+    &_container{
+        margin-right: 3em;
+        @include flex(Default,Default,column);
+        gap: 1em;
 
-    &_content{
-        display: block;
-        @include text(12px, 300);
-        line-height: 22px;
-        span{
-            font-weight: bold;
+        &_caption{
+            display: block;
+            @include text(30px, Bold);
+            margin-bottom: .2em;
         }
-    }
-
-    &_button{
-        margin-top: 1em;
-
-        a{
-        @include text(12px, 300);
-        background-color: $color2;
-        text-decoration: none;
-        color: $color1;
-        padding: 1em 2em;
+    
+        &_content{
+            display: block;
+            @include text(12px, 300);
+            line-height: 22px;
+            span{
+                font-weight: bold;
+            }
+        }
+    
+        &_button{
+            margin-top: 1em;
+            margin-bottom: 1em;
+    
+            a{
+            @include text(12px, 300);
+            background-color: $color2;
+            text-decoration: none;
+            color: $color1;
+            padding: 1em 2em;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ nav{
     span{
         display: block;
         @include responsive(m){
-            @include text(24px,300)
+            // @include text(24px,300)
         }
     }
 }
