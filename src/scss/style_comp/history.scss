@@ -1,9 +1,7 @@
 .history{
-    // background-color: aqua;
     padding: 3.5em 1.5em;
     @include flex(Default,Default,column);
     gap: 1em;
-    border-bottom: 1px solid $color2;
 
     &_caption{
         @include text(30px,Bold);
@@ -18,5 +16,10 @@
         span{
             font-weight: bold;
         }
+    }
+
+    &_line{
+        border-bottom: 1px solid $color2;
+        margin-left: 1.5em;
     }
 }

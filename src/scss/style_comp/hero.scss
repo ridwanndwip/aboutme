@@ -1,6 +1,5 @@
 .hero{
-    padding: 3.5em 1.5em;
-    border-bottom: 1px solid $color2;
+    padding: 3em 1.5em;
 
     &_container{
         margin-right: 3em;
@@ -34,5 +33,10 @@
             padding: 1em 2em;
             }
         }
+    }
+
+    &_line{
+        border-bottom: 1px solid $color2;
+        margin-left: 1.5em;
     }
 }
