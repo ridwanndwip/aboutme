@@ -1,0 +1,47 @@
+.footer{
+    // background-color: aqua;
+    @include flex(default,default,column);
+    padding-top: 2.5em;
+
+    &_circle{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $color2;
+        margin: auto;
+        margin-bottom: 1.5em;
+    }
+
+    &_card{
+        background-color: $color2;
+        color: $color1;
+        @include flex(center,center,column);
+        text-align: center;
+        gap: 2.5em;
+        @include text(12px,default);
+        padding: 3em 6em;
+        line-height: 22px;
+
+        &_caption{
+            font-weight: bold;
+        }
+
+        &_button{
+            background-color: $color1;
+            padding: .6em 2.3em;
+            text-decoration: none;
+            color: $color2;
+        }
+    }
+
+    &_copyright{
+        margin: 5px 0;
+        // background-color: aqua;
+        @include text(10px,300);
+        @include  flex(center,center,default);
+
+        span{
+            display: block;
+        }
+    }
+}
