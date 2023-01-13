@@ -1,0 +1,22 @@
+.history{
+    // background-color: aqua;
+    padding: 3.5em 1.5em;
+    @include flex(Default,Default,column);
+    gap: 1em;
+    border-bottom: 1px solid $color2;
+
+    &_caption{
+        @include text(30px,Bold);
+        display: block;
+        margin-bottom: .2em;
+    }
+
+    &_content{
+        display: block;
+        @include text(12px,300);
+        line-height: 22px;
+        span{
+            font-weight: bold;
+        }
+    }
+}
