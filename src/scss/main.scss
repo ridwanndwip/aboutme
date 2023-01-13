@@ -3,19 +3,17 @@
 
 // Component
 @import'style_comp/nav';
-// @import'style_comp/hero';
+@import'style_comp/hero';
 // @import'style_comp/about';
 
 
 body {
-    overflow-x: hidden;
     background-color: $color1;
-    // padding: 0 2em;
+    font-family: 'montserrat', sans-serif;
+    color: $color2;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'montserrat', sans-serif;
-    color: $color1;
 }

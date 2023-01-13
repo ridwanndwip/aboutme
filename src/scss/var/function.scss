@@ -10,9 +10,13 @@ $color3:#ffffff;
     font-weight: $weight;
 }
 
+// @include text(20px,regular)
+
 @mixin flex($align,$justify, $direction){
     display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-direction: $direction;
 }
+
+// @include flex(flex,center,center,center)

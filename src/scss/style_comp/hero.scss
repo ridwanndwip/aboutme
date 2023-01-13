@@ -1,0 +1,34 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 3em 1.5em;
+    border-bottom: 1px solid $color2;
+
+    &_caption{
+        display: block;
+        @include text(30px, Bold);
+        margin-bottom: .2em;
+    }
+
+    &_content{
+        display: block;
+        @include text(12px, Regular);
+        line-height: 22px;
+        span{
+            font-weight: bold;
+        }
+    }
+
+    &_button{
+        margin: 1em 0;
+        
+        a{
+        @include text(12px, Regular);
+        background-color: $color2;
+        text-decoration: none;
+        color: $color1;
+        padding: 1em 2em;
+        }
+    }
+}

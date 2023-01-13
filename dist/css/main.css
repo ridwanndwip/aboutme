@@ -1,1 +1,60 @@
-p{color:#000}body{overflow-x:hidden;background-color:#f1f1f1}*{margin:0;padding:0;font-family:montserrat,sans-serif;color:#f1f1f1}
+nav {
+  padding: 1.5em;
+  border-bottom: 1px solid #0F3D3E;
+}
+nav span {
+  display: block;
+}
+@media (min-width: 768px) {
+  nav span {
+    font-size: 24px;
+    font-weight: Regular;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 3em 1.5em;
+  border-bottom: 1px solid #0F3D3E;
+}
+.hero_caption {
+  display: block;
+  font-size: 30px;
+  font-weight: Bold;
+  margin-bottom: 0.2em;
+}
+.hero_content {
+  display: block;
+  font-size: 12px;
+  font-weight: Regular;
+  line-height: 22px;
+}
+.hero_content span {
+  font-weight: bold;
+}
+.hero_button {
+  margin: 1em 0;
+}
+.hero_button a {
+  font-size: 12px;
+  font-weight: Regular;
+  background-color: #0F3D3E;
+  text-decoration: none;
+  color: #F1F1F1;
+  padding: 1em 2em;
+}
+
+body {
+  background-color: #F1F1F1;
+  font-family: "montserrat", sans-serif;
+  color: #0F3D3E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
