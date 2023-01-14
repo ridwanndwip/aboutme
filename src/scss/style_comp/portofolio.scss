@@ -1,13 +1,19 @@
 .portofolio{
-    padding: 3.5em 1.5em;
-    border-bottom: 1px solid $color2;
-    // background-color: aqua;
+    padding: 3em 2em;
+    border-bottom: 2px solid $color2;
+    border-left: 2px solid $color2;
 
     &_container{
-    margin-right: 3em;
     @include flex(default,default,column);
-    gap: 1.5em;
-    // background-color: red;
+    gap: 1em;
+
+        @include responsive(xs){
+            margin-left: 3em;
+        }
+
+        @include responsive(s){
+            margin-left: 4em;
+        }
 
     &_caption{
         @include text(30px, Bold);

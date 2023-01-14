@@ -21,29 +21,14 @@ body {
 }
 
 .vertical-line {
-    height: 1900px;
-    border-left: 1px solid $color2;
-    position: absolute;
-    right: 50px;
-    top: 68px;
+    color: $color1;
+    position: fixed;
+    top: 60%;
+    background-color: $color2;
 
-    @include responsive(xs){
-        height: 2000px;
+    .container{
+        @include flex(flex-start, space-around, column);
+        padding: 2em 1.5em;
+        gap: .8em;
     }
-
-    @include responsive(m){
-        height: 2200px;
-    }
-
-    @include responsive(l){
-        height: 2470px;
-    }
-
-    @include responsive(xl){
-        height: 2800px;
-    }
-
-    @include responsive(hd){
-        height: 3600px;
-    }
-  }
+}

@@ -1,25 +1,41 @@
 .history{
-    padding: 3.5em 1.5em;
-    @include flex(Default,Default,column);
-    gap: 1em;
+    padding: 3em 2em;
+    border-left: 2px solid $color2;
 
-    &_caption{
-        @include text(30px,Bold);
-        display: block;
-        margin-bottom: .2em;
-    }
+    &_container{
+        @include flex(Default,Default,column);
+        gap: 1em;
 
-    &_content{
-        display: block;
-        @include text(12px,300);
-        line-height: 22px;
-        span{
-            font-weight: bold;
+        @include responsive(xs){
+            margin-left: 3em;
+        }
+
+        @include responsive(s){
+            margin-left: 4em;
+        }
+
+        &_caption{
+            @include text(30px,Bold);
+            display: block;
+        }
+    
+        &_content{
+            display: block;
+            @include text(12px,300);
+            line-height: 22px;
+            @include responsive(s){
+                line-height: 30px
+            }
+            span{
+                display: block;
+                .fw_bold{
+                    font-weight: bold;
+                    @include responsive(s){display: inline;}
+                }
+            }
         }
     }
 
-    &_line{
-        border-bottom: 1px solid $color2;
-        margin-left: 1.5em;
-    }
 }
+
+// 480 - 576

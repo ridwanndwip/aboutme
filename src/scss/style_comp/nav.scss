@@ -1,11 +1,8 @@
 nav{
+    @include flex(center,space-between,default);
     padding: 1.5em;
-    border-bottom: 1px solid $color2;
 
     span{
         display: block;
-        @include responsive(m){
-            // @include text(24px,300)
-        }
     }
 }
