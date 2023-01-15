@@ -1,110 +1,114 @@
 nav {
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #F1F1F1;
+  border-bottom: 1px solid #0F3D3E;
+  transition: 200ms ease-in-out opacity;
+}
+nav .nav_container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: default;
-  padding: 1.5em;
+  padding: 1.2em 3em;
 }
-nav span {
+@media (min-width: 480px) {
+  nav .nav_container {
+    padding: 1.2em 5em;
+  }
+}
+@media (min-width: 576px) {
+  nav .nav_container {
+    padding: 1.2em 7em;
+  }
+}
+nav .nav_container a {
+  text-decoration: none;
+  color: #0F3D3E;
+  font-size: 15px;
+  font-weight: bold;
   display: block;
 }
 
-.hero {
-  padding: 3em 2em;
-  border-bottom: 2px solid #0F3D3E;
-  border-left: 2px solid #0F3D3E;
+.active_nav {
+  display: block;
+  opacity: 1;
 }
-.hero_container {
+
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: default;
+}
+.hero_caption {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.about {
+  margin-top: 3em;
+  padding: 3em 2em;
+  border-left: 1px solid #0F3D3E;
+  border-bottom: 1px solid #0F3D3E;
+}
+@media (min-width: 480px) {
+  .about {
+    padding: 3em 3em;
+  }
+}
+@media (min-width: 576px) {
+  .about {
+    padding: 3em 5em;
+  }
+}
+.about_container {
   display: flex;
   align-items: Default;
   justify-content: Default;
   flex-direction: column;
   gap: 1em;
 }
-@media (min-width: 480px) {
-  .hero_container {
-    margin-left: 3em;
-  }
-}
-@media (min-width: 576px) {
-  .hero_container {
-    margin-left: 4em;
-  }
-}
-.hero_container_caption {
+.about_container_caption {
   display: block;
   font-size: 30px;
   font-weight: Bold;
   margin-bottom: 0.2em;
 }
-.hero_container_content {
+.about_container_content {
   display: block;
   font-size: 12px;
   font-weight: 300;
   line-height: 22px;
 }
-.hero_container_content span {
+.about_container_content span {
   font-weight: bold;
 }
-.hero_container_button {
+.about_container_history {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.about_container_history span {
+  display: block;
+}
+.about_container_history span .fw_bold {
+  font-weight: bold;
+}
+.about_container_button {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-.hero_container_button a {
+.about_container_button a {
   font-size: 12px;
   font-weight: 300;
   background-color: #0F3D3E;
   text-decoration: none;
   color: #F1F1F1;
   padding: 1em 2em;
-}
-.history {
-  padding: 3em 2em;
-  border-left: 2px solid #0F3D3E;
-}
-.history_container {
-  display: flex;
-  align-items: Default;
-  justify-content: Default;
-  flex-direction: column;
-  gap: 1em;
-}
-@media (min-width: 480px) {
-  .history_container {
-    margin-left: 3em;
-  }
-}
-@media (min-width: 576px) {
-  .history_container {
-    margin-left: 4em;
-  }
-}
-.history_container_caption {
-  font-size: 30px;
-  font-weight: Bold;
-  display: block;
-}
-.history_container_content {
-  display: block;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 22px;
-}
-@media (min-width: 576px) {
-  .history_container_content {
-    line-height: 30px;
-  }
-}
-.history_container_content span {
-  display: block;
-}
-.history_container_content span .fw_bold {
-  font-weight: bold;
-}
-@media (min-width: 576px) {
-  .history_container_content span .fw_bold {
-    display: inline;
-  }
 }
 
 .portofolio {
@@ -211,19 +215,70 @@ body {
   padding: 0;
 }
 
-.vertical-line {
+.social {
   color: #F1F1F1;
   position: fixed;
   top: 60%;
+  right: 0;
   background-color: #0F3D3E;
 }
-.vertical-line .container {
+.social_container {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   flex-direction: column;
   padding: 2em 1.5em;
   gap: 0.8em;
+}
+
+.icon-scroll {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 3.125em;
+  transform: translateX(-50%) scale(2);
+  z-index: -99999;
+}
+
+.icon-arrows::after,
+.icon-arrows::before {
+  content: "";
+}
+
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+  display: block;
+  width: 0.315em;
+  height: 0.315em;
+  border-right: 1px solid #0F3D3E;
+  border-bottom: 1px solid #0F3D3E;
+  margin: 0 0 0.125em 0.315em;
+  transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+  animation-direction: alternate;
+}
+
+.icon-arrows::before {
+  margin-top: 0.315em;
+  animation-delay: 0.1s;
+}
+
+.icon-arrows::after {
+  animation-delay: 0.3s;
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

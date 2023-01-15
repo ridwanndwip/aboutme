@@ -1,8 +1,33 @@
 nav{
-    @include flex(center,space-between,default);
-    padding: 1.5em;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    background-color: $color1;
+    border-bottom: 1px solid $color2;
+    transition: 200ms ease-in-out opacity;
 
-    span{
+    .nav_container{
+    @include flex(center,space-around,default);
+    padding: 1.2em 3em;
+
+    @include responsive(xs){
+        padding: 1.2em 5em;
+    }
+
+    @include responsive(s){
+        padding: 1.2em 7em;
+    }
+
+    a{
+        text-decoration: none;
+        color: $color2;
+        @include text(15px,bold);
         display: block;
     }
+    }
+}
+
+.active_nav {
+    display: block;
+    opacity: 1;
 }

@@ -4,6 +4,7 @@
 // Component
 @import'style_comp/nav';
 @import'style_comp/hero';
+@import'style_comp/about';
 @import'style_comp/history';
 @import'style_comp/portofolio';
 @import'style_comp/footer';
@@ -20,15 +21,59 @@ body {
     padding: 0;
 }
 
-.vertical-line {
+.social {
     color: $color1;
     position: fixed;
     top: 60%;
+    right: 0;
     background-color: $color2;
 
-    .container{
+    &_container{
         @include flex(flex-start, space-around, column);
         padding: 2em 1.5em;
         gap: .8em;
     }
+}
+
+.icon-scroll {
+	position: relative;
+	top: 50%;
+	left: 50%;
+    width: 1em;
+	height: 3.125em;
+	transform: translateX(-50%) scale(2);
+	z-index: -99999;
+}
+
+.icon-arrows::after,
+.icon-arrows::before {
+  content: '';
+}
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+	display: block;
+	width: 0.315em;
+	height: 0.315em;
+	border-right: 1px solid $color2;
+	border-bottom: 1px solid $color2;
+	margin: 0 0 0.125em 0.315em;
+	transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+	animation-direction: alternate;
+}
+
+.icon-arrows::before {
+	margin-top: 0.315em;
+	animation-delay: .1s;
+}
+
+.icon-arrows::after {
+	animation-delay: .3s;
+}
+
+@keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
 }

@@ -1,51 +1,8 @@
 .hero{
-    padding: 3em 2em;
-    border-bottom: 2px solid $color2;
-    border-left: 2px solid $color2;;
+    height: 90vh;
+    @include flex(center,center,default);
 
-    &_container{
-        @include flex(Default,Default,column);
-        gap: 1em;
-        // background-color: aqua;
-
-        @include responsive(xs){
-            margin-left: 3em;
-        }
-
-        @include responsive(s){
-            margin-left: 4em;
-        }
-
-        &_caption{
-            display: block;
-            @include text(30px, Bold);
-            margin-bottom: .2em;
-        }
-    
-        &_content{
-            display: block;
-            @include text(12px, 300);
-            line-height: 22px;
-            span{
-                font-weight: bold;
-            }
-        }
-    
-        &_button{
-            margin-top: 1em;
-            margin-bottom: 1em;
-            
-            a{
-            @include text(12px, 300);
-            background-color: $color2;
-            text-decoration: none;
-            color: $color1;
-            padding: 1em 2em;
-            }
-        }
-    }
-
-    &_line{
-        // border-bottom: 2px solid $color2;
+    &_caption{
+        @include text(50px,bold);
     }
 }
