@@ -111,44 +111,9 @@ nav .nav_container a {
   padding: 1em 2em;
 }
 
-.example-header {
-  background: #3D4351;
-  color: #FFF;
-  font-weight: 300;
-  padding: 3em 1em;
-  text-align: center;
+.portofolio {
+  padding: 2em 2em;
 }
-.example-header h1 {
-  color: #FFF;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-.example-header p {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 700;
-}
-
-.container-fluid .row {
-  padding: 0 0 4em 0;
-}
-.container-fluid .row:nth-child(even) {
-  background: #F1F4F5;
-}
-
-.example-title {
-  text-align: center;
-  margin-bottom: 60px;
-  padding: 3em 0;
-  border-bottom: 1px solid #E4EAEC;
-}
-.example-title p {
-  margin: 0 auto;
-  font-size: 16px;
-  max-width: 400px;
-}
-
 /*==================================
     TIMELINE
 ==================================*/
@@ -187,31 +152,31 @@ nav .nav_container a {
 /*----- TIMELINE MARKER -----*/
 .timeline-marker {
   position: absolute;
-  top: 0;
+  top: 2px;
   bottom: 0;
   left: 0;
-  width: 15px;
+  width: 12px;
 }
 .timeline-marker:before {
   background: #FF6B6B;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   border-radius: 100%;
   content: "";
   display: block;
-  height: 15px;
+  height: 12px;
   position: absolute;
   top: 4px;
-  left: 0;
-  width: 15px;
+  left: -1px;
+  width: 12px;
   transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .timeline-marker:after {
   content: "";
-  width: 3px;
+  width: 1px;
   background: #CCD5DB;
   display: block;
   position: absolute;
-  top: 24px;
+  top: 27px;
   bottom: 0;
   left: 6px;
 }
@@ -219,9 +184,9 @@ nav .nav_container a {
   content: none;
 }
 
-.timeline-item:not(.period):hover .timeline-marker:before {
+.timeline-item:hover .timeline-marker:before {
   background: transparent;
-  border: 3px solid #FF6B6B;
+  border: 2px solid #FF6B6B;
 }
 
 /*----- TIMELINE CONTENT -----*/
@@ -230,38 +195,6 @@ nav .nav_container a {
 }
 .timeline-content p:last-child {
   margin-bottom: 0;
-}
-
-/*----- TIMELINE PERIOD -----*/
-.period {
-  padding: 0;
-}
-.period .timeline-info {
-  display: none;
-}
-.period .timeline-marker:before {
-  background: transparent;
-  content: "";
-  width: 15px;
-  height: auto;
-  border: none;
-  border-radius: 0;
-  top: 0;
-  bottom: 30px;
-  position: absolute;
-  border-top: 3px solid #CCD5DB;
-  border-bottom: 3px solid #CCD5DB;
-}
-.period .timeline-marker:after {
-  content: "";
-  height: 32px;
-  top: auto;
-}
-.period .timeline-content {
-  padding: 40px 0 70px;
-}
-.period .timeline-title {
-  margin: 0;
 }
 
 /*----------------------------------------------
