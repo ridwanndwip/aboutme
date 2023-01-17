@@ -2,8 +2,8 @@ nav {
   opacity: 0;
   position: fixed;
   width: 100%;
-  background-color: #F1F1F1;
-  border-bottom: 1px solid #0F3D3E;
+  background-color: #000000;
+  border-bottom: 1px solid #ffffff;
   transition: 200ms ease-in-out opacity;
 }
 nav .nav_container {
@@ -25,7 +25,7 @@ nav .nav_container {
 }
 nav .nav_container a {
   text-decoration: none;
-  color: #0F3D3E;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
   display: block;
@@ -51,8 +51,8 @@ nav .nav_container a {
 .about {
   margin-top: 3em;
   padding: 3em 2em;
-  border-left: 1px solid #0F3D3E;
-  border-bottom: 1px solid #0F3D3E;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 @media (min-width: 480px) {
   .about {
@@ -105,52 +105,239 @@ nav .nav_container a {
 .about_container_button a {
   font-size: 12px;
   font-weight: 300;
-  background-color: #0F3D3E;
+  background-color: #ffffff;
   text-decoration: none;
-  color: #F1F1F1;
+  color: #000000;
   padding: 1em 2em;
 }
 
-.portofolio {
-  padding: 3em 2em;
-  border-bottom: 2px solid #0F3D3E;
-  border-left: 2px solid #0F3D3E;
-}
-.portofolio_container {
-  display: flex;
-  align-items: default;
-  justify-content: default;
-  flex-direction: column;
-  gap: 1em;
-}
-@media (min-width: 480px) {
-  .portofolio_container {
-    margin-left: 3em;
-  }
-}
-@media (min-width: 576px) {
-  .portofolio_container {
-    margin-left: 4em;
-  }
-}
-.portofolio_container_caption {
-  font-size: 30px;
-  font-weight: Bold;
-  margin-bottom: 0.2em;
-}
-.portofolio_container_card_img {
-  width: 90%;
-}
-.portofolio_container_card_line {
-  background-color: #0F3D3E;
-  height: 1px;
-  width: 100px;
-  margin: 1.5em 0;
-}
-.portofolio_container_card_content {
-  line-height: 22px;
-  font-size: 12px;
+.example-header {
+  background: #3D4351;
+  color: #FFF;
   font-weight: 300;
+  padding: 3em 1em;
+  text-align: center;
+}
+.example-header h1 {
+  color: #FFF;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.example-header p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.container-fluid .row {
+  padding: 0 0 4em 0;
+}
+.container-fluid .row:nth-child(even) {
+  background: #F1F4F5;
+}
+
+.example-title {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 3em 0;
+  border-bottom: 1px solid #E4EAEC;
+}
+.example-title p {
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 400px;
+}
+
+/*==================================
+    TIMELINE
+==================================*/
+/*-- GENERAL STYLES
+------------------------------*/
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
+  line-height: inherit;
+}
+
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+  padding-left: 40px;
+  position: relative;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 0.5em 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+}
+.timeline-marker:before {
+  background: #FF6B6B;
+  border: 3px solid transparent;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.timeline-marker:after {
+  content: "";
+  width: 3px;
+  background: #CCD5DB;
+  display: block;
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+}
+.timeline-item:last-child .timeline-marker:after {
+  content: none;
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+  background: transparent;
+  border: 3px solid #FF6B6B;
+}
+
+/*----- TIMELINE CONTENT -----*/
+.timeline-content {
+  padding-bottom: 40px;
+}
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+
+/*----- TIMELINE PERIOD -----*/
+.period {
+  padding: 0;
+}
+.period .timeline-info {
+  display: none;
+}
+.period .timeline-marker:before {
+  background: transparent;
+  content: "";
+  width: 15px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  top: 0;
+  bottom: 30px;
+  position: absolute;
+  border-top: 3px solid #CCD5DB;
+  border-bottom: 3px solid #CCD5DB;
+}
+.period .timeline-marker:after {
+  content: "";
+  height: 32px;
+  top: auto;
+}
+.period .timeline-content {
+  padding: 40px 0 70px;
+}
+.period .timeline-title {
+  margin: 0;
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE CENTERED
+----------------------------------------------*/
+@media (min-width: 992px) {
+  .timeline-centered,
+  .timeline-centered .timeline-item,
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-marker,
+  .timeline-centered .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline-centered .timeline-item {
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .timeline-centered .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline-centered .timeline-info,
+  .timeline-centered .timeline-content {
+    width: 50%;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item.period .timeline-content {
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .timeline-centered .timeline-item.period {
+    padding: 50px 0 90px;
+  }
+  .timeline-centered .period .timeline-marker:after {
+    height: 30px;
+    bottom: 0;
+    top: auto;
+  }
+  .timeline-centered .period .timeline-title {
+    left: auto;
+  }
+}
+
+/*----------------------------------------------
+    MOD: MARKER OUTLINE
+----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+  background: transparent;
+  border-color: #FF6B6B;
+}
+.marker-outline .timeline-item:hover .timeline-marker:before {
+  background: #FF6B6B;
 }
 
 .footer {
@@ -164,13 +351,13 @@ nav .nav_container a {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #0F3D3E;
+  background-color: #ffffff;
   margin: auto;
   margin-bottom: 1.5em;
 }
 .footer_card {
-  background-color: #0F3D3E;
-  color: #F1F1F1;
+  background-color: #ffffff;
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,10 +373,10 @@ nav .nav_container a {
   font-weight: bold;
 }
 .footer_card_button {
-  background-color: #F1F1F1;
+  background-color: #000000;
   padding: 0.6em 2.3em;
   text-decoration: none;
-  color: #0F3D3E;
+  color: #ffffff;
 }
 .footer_copyright {
   margin: 5px 0;
@@ -205,9 +392,9 @@ nav .nav_container a {
 }
 
 body {
-  background-color: #F1F1F1;
+  background-color: #000000;
   font-family: "montserrat", sans-serif;
-  color: #0F3D3E;
+  color: #ffffff;
 }
 
 * {
@@ -216,11 +403,11 @@ body {
 }
 
 .social {
-  color: #F1F1F1;
+  color: #000000;
   position: fixed;
   top: 60%;
   right: 0;
-  background-color: #0F3D3E;
+  background-color: #ffffff;
 }
 .social_container {
   display: flex;
@@ -252,8 +439,8 @@ body {
   display: block;
   width: 0.315em;
   height: 0.315em;
-  border-right: 1px solid #0F3D3E;
-  border-bottom: 1px solid #0F3D3E;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   margin: 0 0 0.125em 0.315em;
   transform: rotate(45deg);
   animation: mouse-scroll 1s infinite;
