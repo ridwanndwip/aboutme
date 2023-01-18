@@ -5,26 +5,35 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
     padding: 2em 2em;
     
     &_container{
+        
+        &_list{
+        line-height: 1.4em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        }
+        
+        &_schedule{
+            border-top: 1px solid $color2;
+            border-bottom: 1px solid $color2;
+            padding: 2em 0;
+            margin: 2em 0;
+        }
 
+        &_item{
+            padding-left: 40px;
+            position: relative;
+            &:last-child {
+            padding-bottom: 0;
+            }
+        }
     }
 }
 
 /*==================================
     TIMELINE
 ==================================*/
-
-    /*-- GENERAL STYLES
-    ------------------------------*/
-    .timeline {
-        line-height: 1.4em;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        h1, h2, h3, h4, h5, h6 {
-            line-height: inherit;
-        }
-    }
 
     /*----- TIMELINE ITEM -----*/
 
@@ -81,14 +90,16 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
         background: transparent;
         border: 2px solid $primary-color;
     }
+
+    .portofolio_container_item:hover .timeline-marker:before {
+        background: transparent;
+        border: 2px solid $primary-color;
+    }
     
     /*----- TIMELINE CONTENT -----*/
 
     .timeline-content {
         padding-bottom: 40px;
-        p:last-child {
-            margin-bottom: 0;
-        }
     }
 
     /*----------------------------------------------

@@ -114,22 +114,30 @@ nav .nav_container a {
 .portofolio {
   padding: 2em 2em;
 }
-/*==================================
-    TIMELINE
-==================================*/
-/*-- GENERAL STYLES
-------------------------------*/
-.timeline {
+.portofolio_container_list {
   line-height: 1.4em;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
 }
-.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
-  line-height: inherit;
+.portofolio_container_schedule {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 2em 0;
+  margin: 2em 0;
+}
+.portofolio_container_item {
+  padding-left: 40px;
+  position: relative;
+}
+.portofolio_container_item:last-child {
+  padding-bottom: 0;
 }
 
+/*==================================
+    TIMELINE
+==================================*/
 /*----- TIMELINE ITEM -----*/
 .timeline-item {
   padding-left: 40px;
@@ -189,12 +197,14 @@ nav .nav_container a {
   border: 2px solid #FF6B6B;
 }
 
+.portofolio_container_item:hover .timeline-marker:before {
+  background: transparent;
+  border: 2px solid #FF6B6B;
+}
+
 /*----- TIMELINE CONTENT -----*/
 .timeline-content {
   padding-bottom: 40px;
-}
-.timeline-content p:last-child {
-  margin-bottom: 0;
 }
 
 /*----------------------------------------------
