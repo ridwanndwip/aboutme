@@ -3,30 +3,30 @@ nav {
   opacity: 0;
   position: fixed;
   width: 100%;
-  background-color: #000000;
-  border-bottom: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
   transition: 200ms ease-in-out opacity;
 }
 nav .nav_container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: default;
-  padding: 1.2em 3em;
+  padding: 1.2em 2em;
 }
 @media (min-width: 480px) {
   nav .nav_container {
-    padding: 1.2em 5em;
+    padding: 1.2em 3em;
   }
 }
 @media (min-width: 576px) {
   nav .nav_container {
-    padding: 1.2em 7em;
+    padding: 1.2em 5em;
   }
 }
 nav .nav_container a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 15px;
   font-weight: bold;
   display: block;
@@ -49,71 +49,82 @@ nav .nav_container a {
   font-weight: bold;
 }
 
-.about {
+.container_about {
   margin-top: 3em;
   padding: 3em 2em;
-  border-left: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 @media (min-width: 480px) {
-  .about {
+  .container_about {
     padding: 3em 3em;
   }
 }
 @media (min-width: 576px) {
-  .about {
+  .container_about {
     padding: 3em 5em;
   }
 }
-.about_container {
+.container_about .about {
   display: flex;
   align-items: Default;
   justify-content: Default;
   flex-direction: column;
   gap: 1em;
 }
-.about_container_caption {
+.container_about .about_caption {
   display: block;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: Bold;
   margin-bottom: 0.2em;
 }
-.about_container_content {
+.container_about .about_content {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 25px;
 }
-.about_container_content span {
+.container_about .about_content span {
   font-weight: bold;
 }
-.about_container_history {
+.container_about .about_history {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 22px;
+  line-height: 25px;
 }
-.about_container_history span {
+.container_about .about_history span {
   display: block;
 }
-.about_container_history span .fw_bold {
+.container_about .about_history span .fw_bold {
   font-weight: bold;
 }
-.about_container_button {
+.container_about .about_button {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-.about_container_button a {
+.container_about .about_button a {
   font-size: 12px;
   font-weight: 300;
-  background-color: #ffffff;
+  background-color: #000000;
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   padding: 1em 2em;
 }
 
 .container_portofolio {
-  padding: 2em 2em;
+  padding: 3em 2em;
+  border-right: 1px solid #000000;
+}
+@media (min-width: 480px) {
+  .container_portofolio {
+    padding: 3em 3em;
+  }
+}
+@media (min-width: 576px) {
+  .container_portofolio {
+    padding: 3em 5em;
+  }
 }
 .container_portofolio .portofolio_list {
   line-height: 1.4em;
@@ -123,8 +134,8 @@ nav .nav_container a {
   width: 100%;
 }
 .container_portofolio .portofolio_schedule {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   padding: 2em 0;
   margin: 2em 0;
 }
@@ -136,10 +147,9 @@ nav .nav_container a {
   padding-bottom: 0;
 }
 .container_portofolio .portofolio_info {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  margin: 0 0 0.5em 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 1em 0;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -151,14 +161,14 @@ nav .nav_container a {
   width: 12px;
 }
 .container_portofolio .portofolio_marker:before {
-  background: #ffffff;
+  background: #000000;
   border: 2px solid transparent;
   border-radius: 100%;
   content: "";
   display: block;
   height: 12px;
   position: absolute;
-  top: 4px;
+  top: 0px;
   left: -1px;
   width: 12px;
   transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
@@ -166,7 +176,7 @@ nav .nav_container a {
 .container_portofolio .portofolio_marker:after {
   content: "";
   width: 1px;
-  background: #CCD5DB;
+  background: #000000;
   display: block;
   position: absolute;
   top: 27px;
@@ -175,10 +185,15 @@ nav .nav_container a {
 }
 .container_portofolio .portofolio_content {
   padding-bottom: 40px;
+  padding-left: 1em;
+}
+.container_portofolio .portofolio_image {
+  width: 100%;
+  height: auto;
 }
 .container_portofolio .portofolio .portofolio_item:hover .portofolio_marker:before {
   background: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid #000000;
 }
 .portofolio-item:last-child .container_portofolio .portofolio:after {
   content: none;
@@ -201,13 +216,13 @@ nav .nav_container a {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #000000;
   margin: auto;
   margin-bottom: 1.5em;
 }
 .footer_card {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,10 +238,10 @@ nav .nav_container a {
   font-weight: bold;
 }
 .footer_card_button {
-  background-color: #000000;
+  background-color: #ffffff;
   padding: 0.6em 2.3em;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 .footer_copyright {
   margin: 5px 0;
@@ -242,9 +257,9 @@ nav .nav_container a {
 }
 
 body {
-  background-color: #000000;
+  background-color: #ffffff;
   font-family: "montserrat", sans-serif;
-  color: #ffffff;
+  color: #000000;
 }
 
 * {
@@ -253,11 +268,11 @@ body {
 }
 
 .social {
-  color: #000000;
+  color: #ffffff;
   position: fixed;
   top: 60%;
   right: 0;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 .social_container {
   display: flex;
@@ -289,8 +304,8 @@ body {
   display: block;
   width: 0.315em;
   height: 0.315em;
-  border-right: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   margin: 0 0 0.125em 0.315em;
   transform: rotate(45deg);
   animation: mouse-scroll 1s infinite;

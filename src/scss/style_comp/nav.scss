@@ -8,15 +8,15 @@ nav{
     transition: 200ms ease-in-out opacity;
 
     .nav_container{
-    @include flex(center,space-around,default);
-    padding: 1.2em 3em;
+    @include flex(center,space-between,default);
+    padding: 1.2em 2em;
 
     @include responsive(xs){
-        padding: 1.2em 5em;
+        padding: 1.2em 3em;
     }
 
     @include responsive(s){
-        padding: 1.2em 7em;
+        padding: 1.2em 5em;
     }
 
     a{
