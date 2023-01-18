@@ -1,10 +1,7 @@
-$primary-color: #FF6B6B;
-$primary-color-hover: scale-color($primary-color, $lightness: 32%);
-
-.portofolio{
+.container_portofolio{
     padding: 2em 2em;
     
-    &_container{
+    .portofolio{
         
         &_list{
         line-height: 1.4em;
@@ -28,41 +25,22 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
             padding-bottom: 0;
             }
         }
-    }
-}
 
-/*==================================
-    TIMELINE
-==================================*/
-
-    /*----- TIMELINE ITEM -----*/
-
-    .timeline-item {
-        padding-left: 40px;
-        position: relative;
-        &:last-child {
-            padding-bottom: 0;
+        &_info{
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin: 0 0 .5em 0;
+            text-transform: uppercase;
+            white-space: nowrap;
         }
-    }
 
-    /*----- TIMELINE INFO -----*/
-
-    .timeline-info {
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 3px;
-        margin: 0 0 .5em 0;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
-    /*----- TIMELINE MARKER -----*/
-
-    .timeline-marker {
-        position: absolute;
-        top: 2px; bottom: 0; left: 0;
-        width: 12px;
-        &:before {
-            background: $primary-color;
+        &_marker{
+            position: absolute;
+            top: 2px; bottom: 0; left: 0;
+            width: 12px;
+            &:before {
+            background: $color2;
             border: 2px solid transparent;
             border-radius: 100%;
             content: "";
@@ -73,115 +51,113 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
             width: 12px;
             transition: background 0.3s ease-in-out,
                     border 0.3s ease-in-out;
-        }
-        &:after {
+            }
+            &:after {
             content: "";
             width: 1px;
             background: #CCD5DB;
             display: block;
             position: absolute;
             top: 27px; bottom: 0; left: 6px;
+            }
         }
-        .timeline-item:last-child &:after {
+        
+        &_content{
+            padding-bottom: 40px;
+        }
+
+        .portofolio_item:hover .portofolio_marker:before {
+            background: transparent;
+            border: 2px solid $color2;
+        }
+
+        .portofolio-item:last-child &:after {
             content: none;
         }
-    }
-    .timeline-item:hover .timeline-marker:before {
-        background: transparent;
-        border: 2px solid $primary-color;
-    }
 
-    .portofolio_container_item:hover .timeline-marker:before {
-        background: transparent;
-        border: 2px solid $primary-color;
     }
+}
     
-    /*----- TIMELINE CONTENT -----*/
-
-    .timeline-content {
-        padding-bottom: 40px;
-    }
-
     /*----------------------------------------------
         MOD: TIMELINE CENTERED
     ----------------------------------------------*/
 
-        .timeline-centered {
-            @media (min-width: 992px) {
-                &,
-                .timeline-item,
-                .timeline-info,
-                .timeline-marker,
-                .timeline-content {
-                    display: block;
-                    margin: 0;
-                    padding: 0;
-                }
-                .timeline-item {
-                    padding-bottom: 40px;
-                    overflow: hidden;
-                }
-                .timeline-marker {
-                    position: absolute;
-                    left: 50%;
-                    margin-left: -7.5px;
-                }
-                .timeline-info,
-                .timeline-content {
-                    width: 50%;
-                }
-                > .timeline-item:nth-child(odd) .timeline-info {
-                    float: left;
-                    text-align: right;
-                    padding-right: 30px;
-                }
-                > .timeline-item:nth-child(odd) .timeline-content {
-                    float: right;
-                    text-align: left;
-                    padding-left: 30px;
-                }    
-                > .timeline-item:nth-child(even) .timeline-info {
-                    float: right;
-                    text-align: left;
-                    padding-left: 30px;
-                }
-                > .timeline-item:nth-child(even) .timeline-content {
-                    float: left;
-                    text-align: right;
-                    padding-right: 30px;
-                }
-                > .timeline-item.period .timeline-content {
-                    float: none;
-                    padding: 0;
-                    width: 100%;
-                    text-align: center;
-                }
-                .timeline-item.period {
-                    padding: 50px 0 90px;
-                }
-                .period .timeline-marker:after {
-                    height: 30px;
-                    bottom: 0;
-                    top: auto;
-                }
-                .period .timeline-title {
-                    left: auto;
-                }
-            }
-        }
+        // .timeline-centered {
+        //     @media (min-width: 992px) {
+        //         &,
+        //         .timeline-item,
+        //         .timeline-info,
+        //         .timeline-marker,
+        //         .timeline-content {
+        //             display: block;
+        //             margin: 0;
+        //             padding: 0;
+        //         }
+        //         .timeline-item {
+        //             padding-bottom: 40px;
+        //             overflow: hidden;
+        //         }
+        //         .timeline-marker {
+        //             position: absolute;
+        //             left: 50%;
+        //             margin-left: -7.5px;
+        //         }
+        //         .timeline-info,
+        //         .timeline-content {
+        //             width: 50%;
+        //         }
+        //         > .timeline-item:nth-child(odd) .timeline-info {
+        //             float: left;
+        //             text-align: right;
+        //             padding-right: 30px;
+        //         }
+        //         > .timeline-item:nth-child(odd) .timeline-content {
+        //             float: right;
+        //             text-align: left;
+        //             padding-left: 30px;
+        //         }    
+        //         > .timeline-item:nth-child(even) .timeline-info {
+        //             float: right;
+        //             text-align: left;
+        //             padding-left: 30px;
+        //         }
+        //         > .timeline-item:nth-child(even) .timeline-content {
+        //             float: left;
+        //             text-align: right;
+        //             padding-right: 30px;
+        //         }
+        //         > .timeline-item.period .timeline-content {
+        //             float: none;
+        //             padding: 0;
+        //             width: 100%;
+        //             text-align: center;
+        //         }
+        //         .timeline-item.period {
+        //             padding: 50px 0 90px;
+        //         }
+        //         .period .timeline-marker:after {
+        //             height: 30px;
+        //             bottom: 0;
+        //             top: auto;
+        //         }
+        //         .period .timeline-title {
+        //             left: auto;
+        //         }
+        //     }
+        // }
 
     /*----------------------------------------------
         MOD: MARKER OUTLINE
     ----------------------------------------------*/
         
-        .marker-outline {
-            .timeline-marker {
-                &:before {
-                    background: transparent;
-                    border-color: $primary-color;
-                }
-            }
-            .timeline-item:hover .timeline-marker:before {
-                background: $primary-color;
-            }
-        }
+        // .marker-outline {
+        //     .timeline-marker {
+        //         &:before {
+        //             background: transparent;
+        //             border-color: $primary-color;
+        //         }
+        //     }
+        //     .timeline-item:hover .timeline-marker:before {
+        //         background: $primary-color;
+        //     }
+        // }
