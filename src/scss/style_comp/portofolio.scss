@@ -21,14 +21,15 @@
         }
         
         &_schedule{
-            border-top: 1px solid $color2;
-            border-bottom: 1px solid $color2;
-            padding: 2em 0;
-            margin: 2em 0;
+            // border-top: 1px solid $color2;
+            // border-bottom: 1px solid $color2;
+            // padding: 1em 0;
+            margin: 1.5em 0;
+            @include text(35px, bold)
         }
 
         &_item{
-            padding-left: 40px;
+            padding-left: 15px;
             position: relative;
             &:last-child {
             padding-bottom: 0;
@@ -37,9 +38,6 @@
 
         &_info{
             @include text(18px, bold);
-            // font-size: 12px;
-            // font-weight: 700;
-            // letter-spacing: 3px;
             margin: 0 0 1em 0;
             text-transform: uppercase;
             white-space: nowrap;

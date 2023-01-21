@@ -134,13 +134,12 @@ nav .nav_container a {
   width: 100%;
 }
 .container_portofolio .portofolio_schedule {
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
-  padding: 2em 0;
-  margin: 2em 0;
+  margin: 1.5em 0;
+  font-size: 35px;
+  font-weight: bold;
 }
 .container_portofolio .portofolio_item {
-  padding-left: 40px;
+  padding-left: 15px;
   position: relative;
 }
 .container_portofolio .portofolio_item:last-child {
