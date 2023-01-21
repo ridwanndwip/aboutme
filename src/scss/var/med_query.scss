@@ -13,7 +13,6 @@ $full:1680px;
             @content;
         }
     }
-
     @if $breakpoint==s {
         @media (min-width: $small) {
             @content;

@@ -26,6 +26,7 @@ body {
     top: 60%;
     right: 0;
     background-color: $color2;
+	z-index: 9999;
 
     &_container{
         @include flex(flex-start, space-around, column);

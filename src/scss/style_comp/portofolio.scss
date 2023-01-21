@@ -1,6 +1,8 @@
 .container_portofolio{
+    // margin-top: 3em;
     padding: 3em 2em;
-    border-right: 1px solid $color2;
+    border-right: 1px solid $color1;
+    border-bottom: 1px solid $color1;
 
     @include responsive(xs){
         padding: 3em 3em;
@@ -9,169 +11,37 @@
     @include responsive(s){
         padding: 3em 5em;
     }
-    
+
     .portofolio{
-        
-        &_list{
-        line-height: 1.4em;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        }
-        
-        &_schedule{
-            // border-top: 1px solid $color2;
-            // border-bottom: 1px solid $color2;
-            // padding: 1em 0;
-            margin: 1.5em 0;
-            @include text(35px, bold)
-        }
 
-        &_item{
-            padding-left: 15px;
-            position: relative;
-            &:last-child {
-            padding-bottom: 0;
+         &_card{
+            margin: 2em 0;
+            background-image: url('../../../src/img/portofolio_image.jpg');
+            background-position: center;
+            background-size: cover;
+            padding-top: 2em;
+            filter: grayscale(80%);
+            border: 1px solid $color2;
+         }
+
+         &_content{
+            background-color: $color1;
+            padding: 1.5em 0;
+            // padding-top: 5em;
+         }
+
+         &_span{
+            margin: .5em;
+            color: $color2;
+            @include text(12px, 300);
+         }
+
+         &_icon{
+            margin-left: .5em;
+            display: flex;
+            img{
+                display: block;
             }
-        }
-
-        &_info{
-            @include text(18px, bold);
-            margin: 0 0 1em 0;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
-        &_marker{
-            position: absolute;
-            top: 2px; bottom: 0; left: 0;
-            width: 12px;
-            &:before {
-            background: $color2;
-            border: 2px solid transparent;
-            border-radius: 100%;
-            content: "";
-            display: block;
-            height: 12px;
-            position: absolute;
-            top: 0px; left: -1px;
-            width: 12px;
-            transition: background 0.3s ease-in-out,
-                    border 0.3s ease-in-out;
-            }
-            &:after {
-            content: "";
-            width: 1px;
-            background: $color2;
-            display: block;
-            position: absolute;
-            top: 27px; bottom: 0; left: 6px;
-            }
-        }
-        
-        &_content{
-            padding-bottom: 40px;
-            padding-left: 1em;
-        }
-
-        &_image{
-            width: 100%;
-            height: auto;
-        }
-
-        .portofolio_item:hover .portofolio_marker:before {
-            background: transparent;
-            border: 2px solid $color2;
-        }
-
-        .portofolio-item:last-child &:after {
-            content: none;
-        }
-
+         }
     }
 }
-    
-    /*----------------------------------------------
-        MOD: TIMELINE CENTERED
-    ----------------------------------------------*/
-
-        // .timeline-centered {
-        //     @media (min-width: 992px) {
-        //         &,
-        //         .timeline-item,
-        //         .timeline-info,
-        //         .timeline-marker,
-        //         .timeline-content {
-        //             display: block;
-        //             margin: 0;
-        //             padding: 0;
-        //         }
-        //         .timeline-item {
-        //             padding-bottom: 40px;
-        //             overflow: hidden;
-        //         }
-        //         .timeline-marker {
-        //             position: absolute;
-        //             left: 50%;
-        //             margin-left: -7.5px;
-        //         }
-        //         .timeline-info,
-        //         .timeline-content {
-        //             width: 50%;
-        //         }
-        //         > .timeline-item:nth-child(odd) .timeline-info {
-        //             float: left;
-        //             text-align: right;
-        //             padding-right: 30px;
-        //         }
-        //         > .timeline-item:nth-child(odd) .timeline-content {
-        //             float: right;
-        //             text-align: left;
-        //             padding-left: 30px;
-        //         }    
-        //         > .timeline-item:nth-child(even) .timeline-info {
-        //             float: right;
-        //             text-align: left;
-        //             padding-left: 30px;
-        //         }
-        //         > .timeline-item:nth-child(even) .timeline-content {
-        //             float: left;
-        //             text-align: right;
-        //             padding-right: 30px;
-        //         }
-        //         > .timeline-item.period .timeline-content {
-        //             float: none;
-        //             padding: 0;
-        //             width: 100%;
-        //             text-align: center;
-        //         }
-        //         .timeline-item.period {
-        //             padding: 50px 0 90px;
-        //         }
-        //         .period .timeline-marker:after {
-        //             height: 30px;
-        //             bottom: 0;
-        //             top: auto;
-        //         }
-        //         .period .timeline-title {
-        //             left: auto;
-        //         }
-        //     }
-        // }
-
-    /*----------------------------------------------
-        MOD: MARKER OUTLINE
-    ----------------------------------------------*/
-        
-        // .marker-outline {
-        //     .timeline-marker {
-        //         &:before {
-        //             background: transparent;
-        //             border-color: $primary-color;
-        //         }
-        //     }
-        //     .timeline-item:hover .timeline-marker:before {
-        //         background: $primary-color;
-        //     }
-        // }
