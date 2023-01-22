@@ -19,28 +19,31 @@
             background-image: url('../../../src/img/portofolio_image.jpg');
             background-position: center;
             background-size: cover;
-            padding-top: 2em;
+            padding-top: 7em;
             filter: grayscale(80%);
             border: 1px solid $color2;
          }
 
          &_content{
             background-color: $color1;
-            padding: 1.5em 0;
-            // padding-top: 5em;
+            padding: .5em 0;
          }
 
          &_span{
-            margin: .5em;
-            color: $color2;
-            @include text(12px, 300);
+            @include flex(default,default,column);
+            gap: .2em;
+            margin-left: .5em;
+            @include text(13px, 300)
          }
 
          &_icon{
+            margin-top: .5em;
             margin-left: .5em;
             display: flex;
+            gap: .8em;
             img{
                 display: block;
+                width: 20px;
             }
          }
     }

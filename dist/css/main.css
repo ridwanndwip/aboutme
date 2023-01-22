@@ -132,26 +132,33 @@ nav .nav_container a {
   background-image: url("../../../src/img/portofolio_image.jpg");
   background-position: center;
   background-size: cover;
-  padding-top: 2em;
+  padding-top: 7em;
   filter: grayscale(80%);
   border: 1px solid #000000;
 }
 .container_portofolio .portofolio_content {
   background-color: #ffffff;
-  padding: 1.5em 0;
+  padding: 0.5em 0;
 }
 .container_portofolio .portofolio_span {
-  margin: 0.5em;
-  color: #000000;
-  font-size: 12px;
+  display: flex;
+  align-items: default;
+  justify-content: default;
+  flex-direction: column;
+  gap: 0.2em;
+  margin-left: 0.5em;
+  font-size: 13px;
   font-weight: 300;
 }
 .container_portofolio .portofolio_icon {
+  margin-top: 0.5em;
   margin-left: 0.5em;
   display: flex;
+  gap: 0.8em;
 }
 .container_portofolio .portofolio_icon img {
   display: block;
+  width: 20px;
 }
 
 .footer {
